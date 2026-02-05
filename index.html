@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4f46e5">
+
+<script>
+  // Register the Service Worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack PWA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Log</a>
+        <a href="stats.html">Stats</a>
+        <a href="settings.html">Settings</a>
+        <a href="#" id="install-btn" style="display: none; color: #10b981;">📥 Install App</a>
+    </nav>
+
+    <main>
+        <section class="goals-container">
+            <h2>Daily Goals</h2>
+            <div class="grid-inputs goals-grid">
+                <input type="number" id="goal-calories" placeholder="Goal Cals" onchange="saveGoals()">
+                <input type="number" id="goal-protein" placeholder="Goal Protein" onchange="saveGoals()">
+                <input type="number" id="goal-sleep" placeholder="Goal Sleep" onchange="saveGoals()">
+                <select id="goal-exercise" onchange="saveGoals()">
+                    <option value="Normal">Normal</option>
+                    <option value="Mild">Mild</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Extreme">Extreme</option>
+                </select>
+            </div>
+        </section>
+
+        <h1>Log Daily Activity</h1>
+        <form id="tracker-form">
+            <div class="input-group">
+                <label>Date</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="grid-inputs">
+                <div class="input-group">
+                    <label>Calories</label>
+                    <input type="number" id="calories" placeholder="kcal" required>
+                </div>
+                <div class="input-group">
+                    <label>Protein (g)</label>
+                    <input type="number" id="protein" placeholder="grams" required>
+                </div>
+            </div>
+            <div class="grid-inputs">
+                <div class="input-group">
+                    <label>Sleep (hrs)</label>
+                    <input type="number" step="0.5" id="sleep" placeholder="8" required>
+                </div>
+                <div class="input-group">
+                    <label>Exercise</label>
+                    <select id="exercise">
+                        <option value="Normal">Normal (20-30m)</option>
+                        <option value="Mild">Mild (45m)</option>
+                        <option value="Moderate">Moderate (1hr)</option>
+                        <option value="Extreme">Extreme (1hr+)</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" id="save-btn">Save Entry</button>
+        </form>
+
+        <section class="table-container">
+            <h2>Recent Entries</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Cals</th>
+                        <th>Prot</th>
+                        <th>Sleep</th>
+                        <th>Ex</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4f46e5">
+
+<script>
+  // Register the Service Worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - FitTrack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Log</a>
+        <a href="stats.html">Stats</a>
+        <a href="settings.html" class="active">Settings</a>
+    </nav>
+
+    <main>
+        <h1>Data Management</h1>
+        <div class="form">
+            <p>Backup your data by copying the raw storage code.</p>
+            <button onclick="copyDataToClipboard()" style="background: #059669;">📋 Copy All Data</button>
+            <br><br>
+            <button onclick="if(confirm('Clear all?')) { localStorage.clear(); location.reload(); }" style="background: #dc2626;">🗑️ Clear All Data</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
