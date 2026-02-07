@@ -11,7 +11,7 @@ function getFeedback(actual, goal, type) {
         return a === g ? "✅ Goal Met" : "❌ Not as Goal";
     }
     if (type === 'protein' || type === 'sleep') {
-        return a === g ? "✅ Goal Met" : "❌ Not as Goal";
+        return a >= g ? "✅ Goal Met" : "❌ Not as Goal";
     }
     if (type === 'exercise') {
         return actual === goal ? "✅ Goal Met" : "❌ Not as Goal";
@@ -197,4 +197,5 @@ window.addEventListener('appinstalled', () => {
     if (installBtn) installBtn.style.display = 'none';
     deferredPrompt = null;
     console.log('PWA was installed');
+
 });
