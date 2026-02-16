@@ -137,22 +137,6 @@ small { display: block; margin-top: 4px; font-weight: bold; }
 
 
 /* ================= CHATBOT SECTION ================= */
-.coach-frame-wrapper {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-}
-
-.coach-frame-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
 .coach-section {
     background: var(--card);
     padding: 20px;
@@ -161,9 +145,32 @@ small { display: block; margin-top: 4px; font-weight: bold; }
     margin-bottom: 25px;
 }
 
+.coach-frame-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 600px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.coach-frame-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 /* 📱 FORCE MOBILE FULL VIEW */
 @media (max-width: 600px) {
-    main { padding: 15px; }
+    main { 
+        padding: 15px;
+        max-width: 100%;
+    }
     
     .grid-inputs {
         grid-template-columns: 1fr 1fr;
@@ -171,14 +178,17 @@ small { display: block; margin-top: 4px; font-weight: bold; }
 
     h1 { font-size: 1.5rem; }
     
-    /* Add these lines */
     .coach-frame-wrapper {
-        height: 500px;
+        height: 70vh;
+        min-height: 400px;
+        border-radius: 8px;
     }
     
     .coach-section {
         padding: 15px;
+        margin-bottom: 15px;
     }
 }
+
 
 
