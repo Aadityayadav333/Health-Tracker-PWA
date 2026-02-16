@@ -221,9 +221,5 @@ if(chatClose){
   });
 }
 
-if(openChatLink){
-  openChatLink.addEventListener("click", () => {
-    window.location.href = "https://fitness-tracker-chatbot-3-0.onrender.com";
-  });
-}
+
 
