@@ -200,26 +200,3 @@ window.addEventListener('appinstalled', () => {
 
 });
 
-
-
-// ---------------- CHATBOT UI ----------------
-
-const chatBtn = document.getElementById("chat-float-btn");
-const chatOverlay = document.getElementById("chat-overlay");
-const chatClose = document.getElementById("chat-close");
-const openChatLink = document.getElementById("open-chat-link");
-
-if(chatBtn){
-  chatBtn.addEventListener("click", () => {
-    chatOverlay.style.display = "block";
-  });
-}
-
-if(chatClose){
-  chatClose.addEventListener("click", () => {
-    chatOverlay.style.display = "none";
-  });
-}
-
-
-
