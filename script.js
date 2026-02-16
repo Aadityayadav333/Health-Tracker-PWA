@@ -199,3 +199,31 @@ window.addEventListener('appinstalled', () => {
     console.log('PWA was installed');
 
 });
+
+
+
+// ---------------- CHATBOT UI ----------------
+
+const chatBtn = document.getElementById("chat-float-btn");
+const chatOverlay = document.getElementById("chat-overlay");
+const chatClose = document.getElementById("chat-close");
+const openChatLink = document.getElementById("open-chat-link");
+
+if(chatBtn){
+  chatBtn.addEventListener("click", () => {
+    chatOverlay.style.display = "block";
+  });
+}
+
+if(chatClose){
+  chatClose.addEventListener("click", () => {
+    chatOverlay.style.display = "none";
+  });
+}
+
+if(openChatLink){
+  openChatLink.addEventListener("click", () => {
+    window.location.href = "https://fitness-tracker-chatbot-3-0.onrender.com";
+  });
+}
+
