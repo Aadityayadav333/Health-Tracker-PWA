@@ -20,7 +20,7 @@
         <a href="index.html" class="active">Log</a>
         <a href="stats.html">Stats</a>
         <a href="settings.html">Settings</a>
-        <a href="#" id="install-btn" style="display: none; color: #10b981;">📥 Install App</a>
+        <a href="#" id="install-btn" style="display: none; color: #ffffff;">📥 Install App</a>
     </nav>
 
     <main>
@@ -31,10 +31,10 @@
                 <input type="number" id="goal-protein" placeholder="Goal Protein" onchange="saveGoals()">
                 <input type="number" id="goal-sleep" placeholder="Goal Sleep" onchange="saveGoals()">
                 <select id="goal-exercise" onchange="saveGoals()">
-                    <option value="Normal">Normal</option>
-                    <option value="Mild">Mild</option>
-                    <option value="Moderate">Moderate</option>
-                    <option value="Extreme">Extreme</option>
+                    <option value="Normal">Normal(under 30min)</option>
+                    <option value="Mild">Mild(45min)</option>
+                    <option value="Moderate">Moderate(1hr)</option>
+                    <option value="Extreme">Extreme(1hr+)</option>
                 </select>
             </div>
         </section>
@@ -79,16 +79,35 @@
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Cals</th>
-                        <th>Prot</th>
+                        <th>Calories</th>
+                        <th>Protein</th>
                         <th>Sleep</th>
-                        <th>Ex</th>
+                        <th>Exercise</th>
                     </tr>
                 </thead>
                 <tbody id="table-body"></tbody>
             </table>
         </section>
     </main>
+    
+    <!-- Floating Chatbot Button -->
+<div id="chat-float-btn">
+    <img src="images/bot.png" alt="Chatbot">
+</div>
+
+<!-- Chat Overlay -->
+<div id="chat-overlay">
+    <div id="chat-box">
+        <button id="chat-close">✖</button>
+
+        <div class="chat-open-area">
+            <p>Open FitTrack Coach</p>
+            <button id="open-chat-link">Start Chat</button>
+            <p>This may take a while</p>
+        </div>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
+
 </html>
