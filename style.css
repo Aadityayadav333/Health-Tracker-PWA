@@ -200,6 +200,36 @@ small { display: block; margin-top: 4px; font-weight: bold; }
 
 }
 
+/* 📱 FULL SCREEN CHAT EXPERIENCE ON MOBILE */
+@media (max-width: 600px) {
+
+  .coach-section {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .coach-section h2 {
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .coach-frame-wrapper {
+    width: 100vw;
+    height: 88vh;       /* almost full screen */
+    border-radius: 0;
+    border: none;
+  }
+
+  .coach-frame-wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
 
 
 
