@@ -169,55 +169,31 @@ small { display: block; margin-top: 4px; font-weight: bold; }
   border: none;
 }
 
-/* 📱 Mobile optimization */
+/* 📱 TRUE FULL SCREEN CHAT ON MOBILE */
 @media (max-width: 600px) {
+
+  main {
+    padding: 0;
+  }
 
   .coach-section {
-    padding: 14px;
-  }
-
-  .coach-frame-wrapper {
-    width: 94%;          /* slightly narrower for comfort */
-    height: 80vh;       /* BIG vertical space for chat */
-    max-width: none;
-    border-radius: 18px;
-  }
-
-  .coach-section h2 {
-    font-size: 1.15rem;
-  }
-}
-
-/* --- MOBILE SPECIFIC ADJUSTMENTS --- */
-@media (max-width: 600px) {
-    main { padding: 15px; }
-    
-    .grid-inputs {
-        grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
-    }
-
-    h1 { font-size: 1.5rem; }
-
-}
-
-/* 📱 FULL SCREEN CHAT EXPERIENCE ON MOBILE */
-@media (max-width: 600px) {
-
-  .coach-section {
+    margin-top: 10px;
     padding: 0;
     background: transparent;
     box-shadow: none;
   }
 
   .coach-section h2 {
-    padding: 12px;
     text-align: center;
     font-size: 1.1rem;
+    padding: 10px;
   }
 
   .coach-frame-wrapper {
     width: 100vw;
-    height: 88vh;       /* almost full screen */
+    height: calc(100vh - 120px); /* below navbar + title */
+    max-width: none;
+    margin: 0;
     border-radius: 0;
     border: none;
   }
@@ -227,10 +203,6 @@ small { display: block; margin-top: 4px; font-weight: bold; }
     height: 100%;
   }
 }
-
-
-
-
 
 
 
