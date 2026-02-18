@@ -32,26 +32,20 @@
         </div>
     </main>
 
-        <!-- Floating Chatbot Button -->
-<div id="chat-float-btn">
-    <img src="bot.png" alt="Chatbot">
-</div>
 
-<!-- Chat Overlay -->
-<div id="chat-overlay">
-    <div id="chat-box">
-        <button id="chat-close">✖</button>
+     <!-- Chat popup iframe -->
+  <div id="chat-popup">
+    <div id="close-chat" onclick="toggleChat()" aria-label="Close chat">×</div>
+    <iframe 
+      src="https://fitness-tracker-chatbot-3-0.onrender.com/" 
+      allow="clipboard-write" 
+      title="Chatbot Interface"
+    ></iframe>
+  </div>
 
-        <div class="chat-open-area">
-            <p>Open FitTrack Coach</p>
-            <button id="open-chat-link">Start Chat</button>
-        </div>
-    </div>
-</div>
+  <!-- Floating chat button -->
+  <button id="chat-toggle" onclick="toggleChat()" aria-label="Open chat">💬</button>
 
-    
     <script src="script.js"></script>
 </body>
-
 </html>
-
