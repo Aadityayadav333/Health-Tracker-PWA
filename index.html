@@ -1,8 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.png">
-
     <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#4f46e5">
 
@@ -90,35 +89,22 @@
                 <tbody id="table-body"></tbody>
             </table>
         </section>
-
-        <br> <br>
-        <section class="coach-section">
-  <h2>💬 Talk to your Coach</h2>
-
-  <div class="coach-frame-wrapper">
-    <iframe 
-      src="https://fitness-tracker-chatbot-3-0.onrender.com"
-      loading="lazy"
-      allow="clipboard-write"
-      title="FitTrack Coach Chatbot">
-    </iframe>
-  </div>
-</section>
-
     </main>
     
- 
 
+ <!-- Chat popup iframe -->
+  <div id="chat-popup">
+    <div id="close-chat" onclick="toggleChat()" aria-label="Close chat">×</div>
+    <iframe 
+      src="https://fitness-tracker-chatbot-3-0.onrender.com/" 
+      allow="clipboard-write" 
+      title="Chatbot Interface"
+    ></iframe>
+  </div>
 
+  <!-- Floating chat button -->
+  <button id="chat-toggle" onclick="toggleChat()" aria-label="Open chat">💬</button>
 
-
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
