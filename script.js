@@ -1,5 +1,6 @@
 // --- 1. CORE UTILITIES & FEEDBACK ---
 
+
 // Stricter Feedback Logic (Per your request)
 function getFeedback(actual, goal, type) {
     if (!goal || goal === "") return "No goal set";
@@ -197,6 +198,24 @@ window.addEventListener('appinstalled', () => {
     if (installBtn) installBtn.style.display = 'none';
     deferredPrompt = null;
     console.log('PWA was installed');
-
 });
 
+
+
+
+
+const chatPopup = document.getElementById("chat-popup");
+
+    function toggleChat() {
+      if (chatPopup.classList.contains("show")) {
+        chatPopup.classList.remove("show");
+        setTimeout(() => {
+          chatPopup.style.display = "none";
+        }, 300); // match transition duration
+      } else {
+        chatPopup.style.display = "flex";
+        requestAnimationFrame(() => {
+          chatPopup.classList.add("show");
+        });
+      }
+    }
