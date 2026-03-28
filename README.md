@@ -19,14 +19,10 @@
 
 ## 🎬 Video Demo
 
-> 📹 **How to add your demo video:**
-> 1. Upload your screen recording to this GitHub repository (drag & drop into any Issue or directly into the repo)
-> 2. Copy the auto-generated GitHub video URL (e.g. `https://github.com/user/repo/assets/...`)
-> 3. Replace the placeholder below with that URL
 
-https://github.com/Aadityayadav333/Health-Tracker-PWA/assets/YOUR_ASSET_ID/demo.mp4
+https://github.com/user-attachments/assets/76899fee-b2d0-45b8-aab5-e37d946ad5f0
 
-> *(Replace the line above with your actual GitHub-hosted video URL once uploaded. GitHub renders `.mp4` files directly in READMEs — no third-party hosting needed.)*
+
 
 ---
 
